@@ -1,5 +1,11 @@
 #exercicio da aula do dia 09/03/2026
 
+#Passo a passo:
+#definir variaveis
+#definir taxa
+#definir horario de pico
+#tornar tudo apresentavel 
+
 carroPasseio = 10.00
 caminhaoEixo = 15.00
 motocicleta = 5.00
@@ -10,7 +16,6 @@ horarioPassagem = [00.00 - 23.59]
 
 def calculo_taxa():
     global carroPasseio, caminhaoEixo, motocicleta, veiculoOficial
-    taxa = 
 
     
 
