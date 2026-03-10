@@ -18,7 +18,7 @@ def calcular_media():
 
 
 ler_numeros()
-print(f"Os números escolhidos são: ", num1, num2, num3)
+print(f"Os números escolhidos são: {num1}, {num2} e {num3}.")
 calcular_soma()
 calcular_media()
 
