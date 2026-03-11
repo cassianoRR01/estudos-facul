@@ -1,30 +1,44 @@
 #exercicio da aula do dia 09/03/2026
 
-#Passo a passo:
-#definir variaveis
-#definir taxa
-#definir horario de pico
-#tornar tudo apresentavel 
+veiculo = input("Tipo de veiculo(carro, moto, caminhão, oficial): ")
+hora = int(input("Horario da passagem: "))
 
-carroPasseio = 10.00
-caminhaoEixo = 15.00
-motocicleta = 5.00
-veiculoOficial = 0
+if veiculo == "carro":
+    valor = 10
+elif veiculo == "moto":
+    valor = 5
+elif veiculo == "caminhão":
+    eixos = int(input("Quantidade de eixos: "))
+    valor = eixos * 15
+elif veiculo == "oficial":
+    valor = 0
 
-valoresBase = [10.00, 15.00, 5.00, 0]
-horarioPassagem = [00.00 - 23.59]
 
-def calculo_taxa():
-    global carroPasseio, caminhaoEixo, motocicleta, veiculoOficial
+if veiculo == "oficial":
+    valor_total: 0
+
+
+if 6 <= hora <= 9 or 17 <= hora <= 20:
+    valor_total = valor * 1.2
+else:
+    valor_total = valor
+
+
+
+print(f'veiculo: veiculo')
+print(f'Valor total: R$ {valor_total}')
+
+
+
+
+
+
+
+
+
+
+
+
 
     
-
-
-def horario_pico():
-    if horarioPassagem < 06.00 > 09.00 < 17.00 > 20.00:
-        valoresBase = calculo_taxa()
-
     
-print()
-
-        
