@@ -13,6 +13,6 @@ def pular_nuvens ():
             indice = 1
     return saltos 
 
-print()
+pular_nuvens()
 
 #código imcompleto impossibilitando conclusão do teste
