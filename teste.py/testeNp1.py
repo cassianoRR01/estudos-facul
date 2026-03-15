@@ -7,4 +7,4 @@ multi = num1 * num2
 
 print("Primeiro numero: ", num1)
 print("Segundo numero: ", num2)
-print(f'Resultado: soma = {soma}/ subtração = {subt}/ divisão = {divi}/ multi = {multi}.')
+print(f'Resultado: soma = {soma}/ subtração = {subt}/ divisão = {divi}/ multiplicação = {multi}.')
