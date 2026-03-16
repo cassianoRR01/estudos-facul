@@ -1,9 +1,34 @@
 @charset "UTF-8";
 
+:root {
+    --cor1: #00184F
+    --cor2: #66666E
+    --cor3: #9999A1
+}
+
 * {
+    margin: 0px;
+    padding: 0px
     font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 body {
     background-color: lightgreen;
+}
+
+header {
+    background-color: var(--cor1);
+    display: grid;
+    width: 100vw;
+    height: 160px;
+    grid-template: 1fr 1fr 1fr / 1fr;
+    text-align: center
+}
+
+header h1 {
+    grid-row: 2 / 3;
 }
