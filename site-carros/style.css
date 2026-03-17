@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 :root {
-    --cor1: #00184F
-    --cor2: #66666E
-    --cor3: #9999A1
+    --cor1: #00184F;
+    --cor2: #66666E;
+    --cor3: #9999A1;
 }
 
 * {
     margin: 0px;
-    padding: 0px
+    padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    background-color: lightgreen;
+    background-color: rgb(49, 48, 48);
 }
 
 header {
@@ -30,5 +30,37 @@ header {
 }
 
 header h1 {
+    color: white;
     grid-row: 2 / 3;
+}
+
+main {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 10px 1fr 10px; 
+    margin: auto;
+    padding-top: 10px;
+    width: 800px;
+    background-color: var(--cor2);
+}
+
+main img {
+    margin: auto;
+}
+
+div.carro {
+    background-color: rgb(162, 162, 230);
+    grid-column: 2 / 3;
+    text-align: center;
+    width: 400px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+div.carro p {
+    text-align: justify;
+}
+
+div.carro img {
+    
 }
