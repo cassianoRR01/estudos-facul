@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+    <title>Desafio 06 AVA</title>
+</head>
+<body>
+<h1>Modelo de página</h1>
+
+
+<form method=post autocomplete=off>
+	<legend>Formulário</legend>
+	
+	<p>
+		<label for="inome">Nome: </label>
+		<input type="text" name="name" id="inome">
+	</p>
+	<p>
+		<label for="idata">Data de nascimento: </label>
+		<input type="date" name="data" id="idata">
+	</p>
+	<p>
+		<label for="iendereco">Enderaço: </label>
+		<input type="text" name="endereco" id="iendereco">
+	</p>
+	<p>
+		<label for="inumero">Numero: </label>
+		<input type="tel" name="numero" id="inumero">
+	</p>
+	<p>
+		<label for="iest">Estado: </label>
+            <select name="estado" id="iest">
+                <option value="" selected>-- Escolha aqui --</option>
+                <optgroup label="Norte">
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="AC">Acre</option>
+                    <option value="PA">Pará</option>
+                    <option value="RO">Rondonia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+				<optgroup label="Nordeste">
+                    <option value="AL">Alagoas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+
+                <optgroup label="Centro-Oeste">
+                    <option value="GO">Goiás</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                </optgroup>
+
+                <optgroup label="Sudeste">
+                    <option value="ES">Espirito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+            </select>
+		
+	</p>
+	<p>
+		<label for="icidade">Cidade: </label>
+		<input type="text" name="cidade" id="icidade">
+	</p>
+	<p>
+		<label for="igenero">Genero: </label>
+		<select>
+			<option value="" selected>-- Escolha aqui --</option>
+			<option value="masc">Masculino</option>
+			<option value="femi">Feminino</option>
+			<option value="outro">Outro</option>
+		</select>
+	</p>
+	<p>
+		<label for="ibens"> Bens Pessoais: </label>
+		<br>
+		<input type="checkbox" name="bemcasa" id="ibemcasa" <label for="ibemcasa">Casa</label>
+		<br>
+		<input type="checkbox" name="bemcarro" id="ibemcarro" <label for="ibemcarro">Carro</label>
+		<br>
+		<input type="checkbox" name="bemmoto" id="ibemmoto" <label for="ibemmoto">Moto</label>
+	</p>
+	<p>
+		<label for="itexto">Area de texto: </label>
+		<br>
+		<textarea name="texto" id="itexto" cols="40" rows="4"></textarea>
+	</p>
+	<p>
+		<input type="submit" value="Enviar">
+		<input type="reset" value="Limpar">
+	</p>
+</form>
+</body>

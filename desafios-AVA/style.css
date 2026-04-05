@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body{ /*Formatando o corpo da página*/
+    background-color: silver; /*cor de fundo*/
+    color: black; /*cor do texto*/
+}
+
+*{ /*Formatando todos os elementos*/
+    font-family: verdana; /*Definindo fonte*/
+}
+
+h1{ /*Formatando o título da página*/
+    color: purple; /*Definindo cor do texto*/
+    text-align: center; /*Alinhando título no centro*/
+}
+
+fieldset{ /*Formatando a borda ao redor do formulário - caixa que envolve itens formulário*/
+    width: 60%; /*Largura*/
+    margin: 0 auto; /*Centraliza formulário*/
+    border-radius: 15px; /*Borda Arredondada*/
+    background-color: white; /*Cor de Fundo*/
+    box-shadow: 2px 2px 2px gray; /*Sombra na Caixa*/
+}
+
+input, select, textarea{ /*Formatando campo de entrada, seleção e área de texto*/
+    border-radius: 4px; /*Arredondando bordas*/
+    padding: 5px; /*Definindo margem interna*/
+    margin: 5px; /*Definindo margem externa*/
+}
+
+label{ /*Texto antes dos campos*/
+    font-weight: bold; /*Colocando texto em negrito*/
+}
