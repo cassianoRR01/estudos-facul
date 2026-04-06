@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {
+	font-family: arial;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+header {
+	background-color: gray;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+header > h1 {
+	color: white;
+	font-weight: bolder;
+}
+
+article {
+	width: 500px;
+	margin: auto;
+}
+
+article > h2 {
+	color: orange;
+	padding-bottom: 10px;
+}
+
+article > p {
+	text-indent: 30px;
+	padding-bottom: 10px;
+	text-align: justify;
+}
