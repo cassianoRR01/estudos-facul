@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+    function mudarCor() {
+        document.body.style.backgroundColor = "lightblue";
+    }
+    
+    function negrito() {
+        document.body.style.fontWeight = "bold";
+    }
+
+    function normal() {
+        document.body.style.fontWeight = "normal";
+    }
+</script>
+<body>
+    <button onclick="mudarCor()">Clique aqui pra transformar em azul</button>
+
+    <p onmouseover="negrito()" onmouseout="normal()">Ensira nome</p>
+    
+</body>
+</html>
