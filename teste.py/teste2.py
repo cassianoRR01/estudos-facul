@@ -1,18 +1,17 @@
-# executando código do desafio de conceitos básicos de python
-
-def pular_nuvens ():
-    nuvens = [0, 1, 0, 0, 1, 0, 1]
+def pular_nuvens(nuvens):
     saltos = 0
     indice = 0
-    while indice < nuvens - 2:
-        if nuvens (indice + 2) != 1:
-            saltos = 1
-            indice = 2
+
+    while indice < len(nuvens) - 1:
+        if indice + 2 < len(nuvens) and nuvens[indice + 2] == 0:
+            indice += 2
         else:
-            saltos = 1 
-            indice = 1
-    return saltos 
+            indice += 1
+        
+        saltos += 1
 
-pular_nuvens()
+    return saltos
 
-#código imcompleto impossibilitando conclusão do teste
+
+nuvens = [0, 0, 1, 0, 0, 1, 0]
+print(pular_nuvens(nuvens))
