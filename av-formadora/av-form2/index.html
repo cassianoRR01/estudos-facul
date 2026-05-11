@@ -18,24 +18,26 @@
         </div>
 
         <form method="post">
+            <h2>Cadastre-se</h2>
+
             <input type="text" id="nome" placeholder="Insira seu nome" required>
             
-            <input type="text" id="sobrenome" placeholder="Insira seu sobrenome">
+            <input type="text" id="sobrenome" placeholder="Insira seu sobrenome" required>
             
-            <input type="email" id="email" placeholder="Insira seu e-mail">
+            <input type="email" id="email" placeholder="Insira seu e-mail" required>
             
-            <input type="date" id="data" placeholder="Data de nascimento">
+            <input type="date" id="data" placeholder="Data de nascimento" required>
             
-            <select id="genero">
-                <option value="" selected>selecione seu gênero<option>
+            <select id="genero" required>
+                <option value="" selected>selecione seu gênero</option>
                 <option value="masc">masculino</option>
                 <option value="fem">feminino</option>
                 <option value="outro">outro</option>
             </select>
             
-            <input type="password" id="senha" placeholder="Crie uma senha">
+            <input type="password" id="senha" placeholder="Crie uma senha" minlength="6" required>
             
-            <input type="password" id="confirmSenha" placeholder="Confirme sua senha">
+            <input type="password" id="confirmSenha" placeholder="Confirme sua senha" required>
             
             <button type="submit">Enviar</button>
         </form>
