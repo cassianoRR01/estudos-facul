@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>Avaliação formadora III</title>
 </head>
 <body>
+    <main>
+        <div id="esquerda">
+            <section id="formulario">
+                <form>
+                    <h2>Adicione uma tarefa</h2>
+                    
+                    <input type="text" id="addTarefa" placeholder="ex: Tirar o lixo">
+                    
+                    <button id="botao">Salvar</button>
+                </form>
+            </section>
+            
+            <div id="barraProg">
+                <div id="circuloProg">
+                    <div id="textoProg">0%</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="direita">
+            <section id="tarefa">
+                <!--Tarefas irão entrar aqui-->
+            </section>
+        </div>
+    </main>
     
+    <script src="script.js"></script>
 </body>
 </html>

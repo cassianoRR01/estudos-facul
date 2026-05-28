@@ -1,0 +1,117 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+}
+
+.container{
+  display:flex;
+  height:100vh;
+}
+
+.leftPanel{
+  width:35%;
+  padding:40px;
+  background:#111827;
+}
+
+.rightPanel{
+  flex:1;
+  padding:40px;
+}
+
+input{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  margin-top:20px;
+  background:#1e293b;
+  color:white;
+}
+
+button{
+  cursor:pointer;
+}
+
+#addButton{
+  width:100%;
+  margin-top:20px;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#7c3aed;
+  color:white;
+  font-size:16px;
+}
+
+.progressBox{
+  margin-top:50px;
+  display:flex;
+  justify-content:center;
+}
+
+.circle{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+  conic-gradient(#7c3aed 0%, #1e293b 0%);
+}
+
+.circle span{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  background:#111827;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  font-weight:bold;
+}
+
+.task{
+  background:#111827;
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:15px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.left{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.check{
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  border:2px solid #7c3aed;
+  background:none;
+  color:white;
+}
+
+.done{
+  background:#7c3aed;
+}
+
+.completed{
+  text-decoration:line-through;
+  opacity:0.5;
+}
+
+.delete{
+  border:none;
+  background:none;
+  color:red;
+}

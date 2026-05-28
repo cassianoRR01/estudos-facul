@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+div.esquerda {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+div.direita {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.tarefaStl {
+    background-color: grey;
+}
