@@ -12,7 +12,10 @@ $("#botao").click(function(event) {
         return;
     }
 
-    tarefas.push(addTarefa);
+    tarefas.push({
+        texto: addTarefa,
+        concluida: false
+    });
 
     localStorage.setItem("listaTarefas", JSON.stringify(tarefas));
 
@@ -25,13 +28,44 @@ function mostrarTarefas() {
 
     $("#tarefa").html("");
 
-    for (let item of tarefas) {
+    tarefas.forEach((item, index) => {
 
         $("#tarefa").append(`
             <div class="tarefaStl">
-                <p>${item}</p>
+                <p>
+                    <input type="checkbox" class="check" data-index="${index}" ${item.concluida ? "checked" : ""}>
+
+                    <span class="textoTarefa ${item.concluida ? "riscado" : ""}">${item.texto}</span>
+
+                    <span class="lixeira material-symbols-outlined"
+                    data-index="${index}">delete</span>
+                </p>
             </div>
         `);
-    }
+    });
 }
+
+$(document).on("click", ".lixeira", function() {
+
+    let indice = $(this).data("index");
+
+    tarefas.splice(indice, 1);
+
+    localStorage.setItem("listaTarefas",JSON.stringify(tarefas));
+
+    mostrarTarefas();
+
+});
+
+$(document).on("change", ".check", function() {
+
+    let indice = $(this).data("index");
+
+    tarefas[indice].concluida = $(this).prop("checked");
+
+    localStorage.setItem("listaTarefas",JSON.stringify(tarefas));
+
+    mostrarTarefas();
+    
+}); 
 
