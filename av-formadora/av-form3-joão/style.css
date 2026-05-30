@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial;
+    width: 600px;
+    margin: 30px auto;
+}
+
+input {
+    padding: 8px;
+    width: 300px;
+}
+
+button {
+    padding: 8px;
+}
+
+li {
+    margin: 10px 0;
+}
