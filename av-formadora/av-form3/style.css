@@ -73,27 +73,50 @@ div#direita {
     padding-bottom: 30px;
 }
 
-#tarefa {
-
-}
-
 .tarefaStl {
-
+    background-color: rgb(253, 80, 80);
+    border-radius: 20px;
+    border: none;
 }
 
 .riscado {
     text-decoration: line-through;
 }
 
+.verde {
+    background-color: rgb(31, 221, 31);
+}
+
 .tarefaStl p {
-    background-color: grey;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 15px 0px 15px;
     margin-bottom: 10px;
+    font-size: 1em;
 }
+
+.check {
+    padding-left: 3px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(63, 63, 226);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.check:checked {
+    background-color: rgb(63, 63, 226);
+}
+
+.check:checked::before {
+    content: "✓";
+    font-weight: bolder;
+    color: black;
+}
+
 
 .lixeira {
     cursor: pointer;

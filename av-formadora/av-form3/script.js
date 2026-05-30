@@ -31,7 +31,7 @@ function mostrarTarefas() {
     tarefas.forEach((item, index) => {
 
         $("#tarefa").append(`
-            <div class="tarefaStl">
+            <div class="tarefaStl ${item.concluida ? "verde" : ""}">
                 <p>
                     <input type="checkbox" class="check" data-index="${index}" ${item.concluida ? "checked" : ""}>
 
@@ -62,6 +62,8 @@ $(document).on("change", ".check", function() {
     let indice = $(this).data("index");
 
     tarefas[indice].concluida = $(this).prop("checked");
+
+
 
     localStorage.setItem("listaTarefas",JSON.stringify(tarefas));
 
