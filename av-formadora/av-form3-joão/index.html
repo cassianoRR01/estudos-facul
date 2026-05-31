@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Diária</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <h1>Lista de Tarefas</h1>
 
-    <input type="text" id="tarefa" placeholder="Digite uma tarefa">
+    <div class="container">
 
-    <button onclick="adicionar()">Adicionar</button>
+        <h1>Agenda Diária</h1>
 
-    <ul id="lista"></ul>
+        <div class="input-area">
+            <input type="text" id="tarefa" placeholder="Digite uma tarefa">
+
+            <button id="btnAdicionar">Adicionar</button>
+        </div>
+
+        <ul id="lista"></ul>
+
+    </div>
 
     <script src="script.js"></script>
 
