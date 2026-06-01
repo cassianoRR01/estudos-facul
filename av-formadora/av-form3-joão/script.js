@@ -1,112 +1,113 @@
-let tarefas = [];
+let btnAdicionar = document.getElementById("btnAdicionar");
+let inputTarefa = document.getElementById("tarefa");
+let lista = document.getElementById("lista");
 
-carregarCookie();
+let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+
 mostrarTarefas();
 
-$("#btnAdicionar").click(function() {
+btnAdicionar.addEventListener("click", adicionarTarefa);
 
-    let texto = $("#tarefa").val();
+function adicionarTarefa() {
 
-    if(texto.trim() === "") {
+    let texto = inputTarefa.value.trim();
+
+    if (texto === "") {
         return;
     };
 
-    tarefas.push({texto: texto, concluida: false});
+    tarefas.push({
+        texto: texto,
+        concluida: false
+    });
 
-    salvarCookie();
+    salvarTarefas();
+
     mostrarTarefas();
 
-    $("#tarefa").val("");
-
-});
+    inputTarefa.value = "";
+};
 
 function mostrarTarefas() {
 
-    $("#lista").html("");
+    lista.innerHTML = "";
 
-    tarefas.forEach((tarefa,index) => {
+    tarefas.forEach((tarefa, index) => {
 
-        $("#lista").append(`
+        let li = document.createElement("li");
 
-            <li>
+        li.innerHTML = `
+            <div>
 
-                <div>
+                <input type="checkbox" class="check" data-index="${index}" ${tarefa.concluida ? "checked" : ""}>
 
-                    <input type="checkbox" class="check" data-index="${index}" 
-                    ${tarefa.concluida ? "checked" : ""}>
+                <span class=" ${tarefa.concluida ? "concluida" : ""}">
+                    ${tarefa.texto}
+                </span>
 
-                    <span class="${tarefa.concluida ? "concluida" : ""}">
-                        ${tarefa.texto}
-                    </span>
+            </div>
 
-                </div>
+            <button class="remover" data-index="${index}"> X </button>
+        `;
 
-                <button class="remover" data-index="${index}"> X </button>
+        lista.appendChild(li);
+    });
 
-            </li>
+    adicionarEventos();
+}
 
-        `);
+function adicionarEventos() {
+
+    let checkboxes = document.querySelectorAll(".check");
+
+    checkboxes.forEach(check => {
+
+        check.addEventListener("change", function() {
+
+            let indice = this.dataset.index;
+
+            tarefas[indice].concluida = this.checked;
+
+            salvarTarefas();
+
+            mostrarTarefas();
+        });
 
     });
 
-}
+    let botoesRemover = document.querySelectorAll(".remover");
 
-$(document).on("change",".check",function() {
+    botoesRemover.forEach(botao => {
 
-    let indice = $(this).data("index");
+        botao.addEventListener("click", function() {
 
-    tarefas[indice].concluida = $(this).prop("checked");
+            let indice = this.dataset.index;
 
-    salvarCookie();
-    mostrarTarefas();
+            tarefas.splice(indice, 1);
 
-});
+            salvarTarefas();
 
-$(document).on("click",".remover",function() {
+            mostrarTarefas();
+        });
 
-    let indice = $(this).data("index");
-
-    tarefas.splice(indice,1);
-
-    salvarCookie();
-
-    mostrarTarefas();
-
-});
-
-function salvarCookie() {
-
-    document.cookie = "tarefas=" + encodeURIComponent(JSON.stringify(tarefas)) + 
-    ";max-age=604800";
+    });
 
 };
 
-function carregarCookie() {
+function salvarTarefas() {
 
-    let cookie = document.cookie.split("; ").find(row => row.startsWith("tarefas="));
+    localStorage.setItem("tarefas",JSON.stringify(tarefas));
 
-    if(cookie) {
+};
 
-        tarefas = JSON.parse(
-            decodeURIComponent(
-                cookie.split("=")[1]
-            )
-        );
+function verificarTarefasPendentes() {
 
+    let pendentes = tarefas.filter(tarefa => !tarefa.concluida);
+
+    if (pendentes.length > 0) {
+        alert(`Você possui ${pendentes.length} tarefa(s) pendente(s)!`);
     };
 
 };
 
-setTimeout(function() {
-
-    alert("Lembre-se de concluir suas tarefas!");
-
-},5000);
-
-$.ajax({url:"https://jsonplaceholder.typicode.com/todos/1", method:"GET",success:function(resposta) {
-
-        console.log("AJAX funcionando:",resposta);
-
-    };
-
-});
+setInterval(verificarTarefasPendentes, 5000);

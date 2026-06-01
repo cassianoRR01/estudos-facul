@@ -5,7 +5,6 @@ let circuloProg = document.getElementById("circuloProg");
 
 mostrarTarefas();
 
-
 $("#botao").click(function(event) {
 
     event.preventDefault();
@@ -106,8 +105,8 @@ function verificarTarefasPendentes() {
 
     if (pendentes.length > 0) {
         alert(`Você possui ${pendentes.length} tarefa(s) pendente(s)!`);
-    }
+    };
 
-}
+};
 
 setInterval(verificarTarefasPendentes, 5000);
