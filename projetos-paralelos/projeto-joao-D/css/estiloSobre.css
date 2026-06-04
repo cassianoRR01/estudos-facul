@@ -80,6 +80,10 @@ div.texto h2 {
     margin-bottom: 30px;
 }
 
+div.texto p {
+    text-indent: 30px;
+}
+
 section.sectTexto img {
     width: 300px;
     border-radius: 8px;
@@ -112,7 +116,7 @@ div.conteudo {
     color: white;
     background-color: rgba(0, 0, 0, 0.815);
     border-radius: 10px;
-    width: 550px;
+    width: 750px;
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -124,4 +128,13 @@ div.conteudo {
 span.material-symbols-outlined {
     color: black;
     font-size: 6em;
+}
+
+section#sectSobreAcad {
+    flex-direction: row-reverse;
+    height: 550px;
+}
+
+section#sectSobreAcad div {
+    width: 50%;
 }
