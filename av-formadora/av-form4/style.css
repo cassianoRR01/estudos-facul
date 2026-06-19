@@ -1,0 +1,126 @@
+/* Importando uma fonte amigável e arredondada */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap');
+
+
+body {
+    background-image: url(imagens/calculadora-fundo.png);
+    background-size: cover;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    background-position: center;
+    background-color: #dcf2f9; /* Cor de fallback baseada na imagem */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #387083; /* Tom de azul mais escuro e calmo */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+}
+
+.calculadora {
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo branco levemente transparente */
+    padding: 30px;
+    border-radius: 30px; /* Bordas bem arredondadas */
+    width: 340px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 
+                inset 0 0 0 5px #c2e8f2; /* Detalhe de borda interna grossa */
+}
+
+#visor {
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    border: 3px solid #c2e8f2;
+    border-radius: 18px;
+    font-size: 2.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    color: #387083;
+    text-align: right;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: inset 0 4px 6px rgba(0,0,0,0.03);
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    background-color: #ffffff;
+    border: none;
+    color: #4a869a;
+    font-size: 1.6rem;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 16px;
+    height: 65px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    
+    /* Efeito de botão "gordinho" estilo desenho animado */
+    box-shadow: 0 6px 0 #d1eaf1;
+}
+
+/* Animação ao clicar no botão */
+button:active {
+    transform: translateY(6px); /* Afunda o botão */
+    box-shadow: 0 0 0 #d1eaf1;
+}
+
+/* Estilizando os Operadores Matemáticos (/, *, -, +) */
+.botoes button:nth-child(4),
+.botoes button:nth-child(8),
+.botoes button:nth-child(12),
+.botoes button:nth-child(16) {
+    background-color: #79cce3; /* Azul um pouco mais vivo */
+    color: white;
+    box-shadow: 0 6px 0 #5aaeca;
+}
+
+.botoes button:nth-child(4):active,
+.botoes button:nth-child(8):active,
+.botoes button:nth-child(12):active,
+.botoes button:nth-child(16):active {
+    box-shadow: 0 0 0 #5aaeca;
+}
+
+/* Estilizando o botão de Igual (=) */
+.botoes button:nth-child(15) {
+    background-color: #8ce3a3; /* Verde pastel suave */
+    color: #216a35;
+    box-shadow: 0 6px 0 #68b87d;
+}
+
+.botoes button:nth-child(15):active {
+    box-shadow: 0 0 0 #68b87d;
+}
+
+/* Estilizando o botão "C" para ocupar toda a base */
+.botoes button:last-child {
+    grid-column: span 4;
+    background-color: #ffaeb4; /* Vermelho/Rosa suave */
+    color: #8c262e;
+    box-shadow: 0 6px 0 #d9888e;
+    margin-top: 5px;
+}
+
+.botoes button:last-child:active {
+    box-shadow: 0 0 0 #d9888e;
+}
