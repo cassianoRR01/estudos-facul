@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="busca-video.css">
+    <title>Busca de Vídeo</title>
+</head>
+<body>
+
+    <main id="appBuscaVideo" class="app-busca-video">
+
+        <!-- Cabeçalho -->
+        <header id="headerBusca" class="header-busca">
+            <h1 id="tituloPagina" class="titulo-pagina">
+                Busca de Vídeo
+            </h1>
+
+            <p id="descricaoPagina" class="descricao-pagina">
+                Pesquise um vídeo e visualize o primeiro resultado encontrado.
+            </p>
+        </header>
+
+        <!-- Área de Pesquisa -->
+        <section id="secaoPesquisa" class="secao-pesquisa">
+
+            <form id="formPesquisa" class="form-pesquisa">
+
+                <div id="grupoPesquisa" class="grupo-pesquisa">
+
+                    <label
+                        for="inputPesquisa"
+                        id="labelPesquisa"
+                        class="label-pesquisa"
+                    >
+                        Pesquisar vídeo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="inputPesquisa"
+                        class="input-pesquisa"
+                        name="pesquisa"
+                        placeholder="Digite o nome do vídeo..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+                <button
+                    type="submit"
+                    id="btnBuscar"
+                    class="btn-buscar"
+                >
+                    Buscar
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Área de Resultado -->
+        <section id="secaoResultado" class="secao-resultado">
+
+            <h2 id="tituloResultado" class="titulo-resultado">
+                Resultado
+            </h2>
+
+            <!-- Informações do vídeo -->
+            <div
+                id="cardVideo"
+                class="card-video"
+            >
+
+                <div
+                    id="thumbnailContainer"
+                    class="thumbnail-container"
+                >
+                    <!-- Thumbnail do vídeo -->
+                    <img
+                        id="imgThumbnail"
+                        class="img-thumbnail"
+                        src=""
+                        alt="Miniatura do vídeo"
+                    >
+                </div>
+
+                <div
+                    id="infoVideo"
+                    class="info-video"
+                >
+
+                    <h3
+                        id="nomeVideo"
+                        class="nome-video"
+                    >
+                        Título do Vídeo
+                    </h3>
+
+                    <p
+                        id="canalVideo"
+                        class="canal-video"
+                    >
+                        Nome do Canal
+                    </p>
+
+                    <p
+                        id="descricaoVideo"
+                        class="descricao-video"
+                    >
+                        Descrição do vídeo.
+                    </p>
+
+                </div>
+
+                <!-- Área onde o vídeo poderá ser incorporado -->
+                <div
+                    id="playerContainer"
+                    class="player-container"
+                >
+
+                    <iframe
+                        id="iframeVideo"
+                        class="iframe-video"
+                        src=""
+                        title="Player do YouTube"
+                        allowfullscreen
+                    >
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="busca-video.js"></script>
+</body>
+</html>
