@@ -1,3 +1,4 @@
+@ -1,113 +0,0 @@
 let btnAdicionar = document.getElementById("btnAdicionar");
 let inputTarefa = document.getElementById("tarefa");
 let lista = document.getElementById("lista");
